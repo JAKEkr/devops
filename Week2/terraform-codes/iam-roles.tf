@@ -36,7 +36,7 @@ POLICY
 
 // EKS Cluster IAM Role - EKS에서 관리하는 클러스터를 운영하는 데 필요한 다른 AWS 서비스 리소스에 대한 액세스를 허용
 resource "aws_iam_role" "test-eks_iam_cluster" {
-  name = "TEST-EKS-IAM-CLUSTER"
+  name = "JJLEE-EKS-IAM-CLUSTER"
 
   // 신뢰할 수 있는 엔터티 - 지정된 조건에서 이 역할을 수임할 수 있는 엔터티
   assume_role_policy = <<POLICY
@@ -63,7 +63,7 @@ resource "aws_iam_role_policy_attachment" "test-eks_iam_cluster_AmazonEKSCluster
 
 // EKS Worker Node IAM Role - EC2 인스턴스가 사용자를 대신하여 AWS 서비스를 호출하도록 허용
 resource "aws_iam_role" "test-eks_iam_nodes" {
-  name = "TEST-EKS-IAM-WORKERNODE"
+  name = "JJLEE-EKS-IAM-WORKERNODE"
 
   // 신뢰할 수 있는 엔터티 - 지정된 조건에서 이 역할을 수임할 수 있는 엔터티
   assume_role_policy = <<POLICY
